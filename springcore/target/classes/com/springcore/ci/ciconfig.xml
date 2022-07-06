@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springcore.ci.Certi" name="cert"
+		c:name="Python Certification">
+		<!-- <constructor-arg value="Anroid Certification" /> -->
+	</bean>
+
+	<bean class="com.springcore.ci.Person" name="person"
+		c:name="Mukesh" c:personId="1999" c:certi-ref="cert"
+		c:phoneNums="921134,467386278,647382763" />
+	<!-- <constructor-arg> <value>Sanyam</value> </constructor-arg> <constructor-arg 
+		value="1088" type="int" /> <constructor-arg ref="cert" /> </bean> -->
+
+	<!-- <bean class="com.springcore.ci.Addition" name="add" c:a="5" c:b="10" 
+		/> -->
+
+	<bean class="com.springcore.ci.Addition" name="add">
+		<constructor-arg value="12" type="int"  index="1"/>
+		<constructor-arg value="200" type="int"  index="0" />
+	</bean>
+
+</beans>
